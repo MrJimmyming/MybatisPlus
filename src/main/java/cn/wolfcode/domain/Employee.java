@@ -1,4 +1,4 @@
-package cn.wolfcode;
+package cn.wolfcode.domain;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;

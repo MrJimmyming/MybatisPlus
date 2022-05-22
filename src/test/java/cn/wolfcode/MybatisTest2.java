@@ -1,15 +1,12 @@
 package cn.wolfcode;
 
+import cn.wolfcode.domain.Employee;
 import cn.wolfcode.mapper.EmployeeMapper;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import javax.swing.plaf.PanelUI;
-import java.util.List;
 
 @SpringBootTest
 public class MybatisTest2 {

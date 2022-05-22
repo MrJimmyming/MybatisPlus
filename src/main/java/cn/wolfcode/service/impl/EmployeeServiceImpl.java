@@ -1,6 +1,6 @@
 package cn.wolfcode.service.impl;
 
-import cn.wolfcode.Employee;
+import cn.wolfcode.domain.Employee;
 import cn.wolfcode.mapper.EmployeeMapper;
 import cn.wolfcode.qo.queryEmployee;
 import cn.wolfcode.service.IEmployeeService;

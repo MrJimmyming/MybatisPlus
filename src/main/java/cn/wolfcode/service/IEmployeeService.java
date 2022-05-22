@@ -1,6 +1,6 @@
 package cn.wolfcode.service;
 
-import cn.wolfcode.Employee;
+import cn.wolfcode.domain.Employee;
 import cn.wolfcode.qo.queryEmployee;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
