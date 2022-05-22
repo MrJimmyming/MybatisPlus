@@ -1,8 +1,10 @@
 package cn.wolfcode.controller;
 
-import cn.wolfcode.domain.Employee;
 import cn.wolfcode.domain.AjaxResult;
+import cn.wolfcode.domain.Employee;
+import cn.wolfcode.qo.QueryEmployee;
 import cn.wolfcode.service.IEmployeeService;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,6 +24,12 @@ public class EmployeeController {
     public Employee detail(Long id){
         return employeeService.getById(id);
     }
+    @GetMapping("/page")
+    public Page<Employee> page(QueryEmployee queryEmployee){
+
+        return employeeService.getPage(queryEmployee);
+    }
+
     @PostMapping
     public AjaxResult save(Employee employee){
         employeeService.save(employee);

@@ -5,7 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class queryObject {
-    private int currentPage=1;
-    private int pageSize=3;
+public class QueryEmployee extends QueryObject {
+    private String keyword;
 }

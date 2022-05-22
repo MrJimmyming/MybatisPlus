@@ -1,7 +1,9 @@
 package cn.wolfcode;
 
+import cn.wolfcode.domain.Department;
 import cn.wolfcode.domain.Employee;
-import cn.wolfcode.qo.queryEmployee;
+import cn.wolfcode.mapper.DepartmentMapper;
+import cn.wolfcode.qo.QueryEmployee;
 import cn.wolfcode.service.IEmployeeService;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -14,12 +16,14 @@ public class ServiceTest {
 
     @Autowired
     private IEmployeeService employeeService;
+    @Autowired
+    private DepartmentMapper departmentMapper;
 
     @Test
     public void serviceTest(){
         //service 分页实现
         BaseMapper<Employee> employeeMapper = employeeService.getBaseMapper();
-        queryEmployee queryEmployee = new queryEmployee();
+        QueryEmployee queryEmployee = new QueryEmployee();
         queryEmployee.setKeyword(null);
 
        Page<Employee> page =  employeeService.getPage(queryEmployee);
@@ -28,6 +32,11 @@ public class ServiceTest {
            /// 3333
         //Thread
     }
+    @Test
+    public void departmentTest(){
+        departmentMapper.selectList(null).forEach(System.out::println);
+    }
+
 
 
 }
